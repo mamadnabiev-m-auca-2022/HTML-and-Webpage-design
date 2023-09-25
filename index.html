@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>My Laptop Store</title>
-  <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
         }
-        
+
         h1 {
             color: #007BFF;
         }
@@ -24,31 +24,62 @@
             line-height: 1.5;
         }
 
-       
-
         img {
             max-width: 50%;
-            height: 300;
+            height: auto; /* Adjusted to maintain aspect ratio */
             display: block;
             margin: 0 auto;
+        }
+
+        /* Add a style for your navigation menu */
+        ul.nav-menu {
+            list-style-type: none;
+            padding: 0;
+            background-color: #007BFF;
+            text-align: center;
+        }
+
+        ul.nav-menu li {
+            display: inline;
+            margin-right: 20px; /* Adjust the spacing between menu items */
+        }
+
+        ul.nav-menu li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Add a style for your footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Laptop Store</h1>
+    <ul class="nav-menu">
+        <!-- Add links to your categories here -->
+        <li><a href="#home">Home</a></li>
+        <li><a href="#why-choose">Why Choose</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+    </ul>
+
+    <h1 id="home">Welcome to My Laptop Store</h1>
     <p>This is my site. I sell laptops.</p>
 
     <img src="https://img5.lalafo.com/i/posters/original_webp/19/a7/46/e47e06bcb27817c6efffb434d8.webp" alt="Laptop 1">
     <img src="https://img5.lalafo.com/i/posters/original_webp/7c/c2/bc/73b7e5033e406bf618b17f17fd.webp" alt="Laptop 2">
 
-    <h2>Why Choose Our Laptops?</h2>
+    <h2 id="why-choose">Why Choose Our Laptops?</h2>
     <ul>
         <li>High-performance processors</li>
         <li>Sleek and lightweight designs</li>
-        
     </ul>
 
-    <h2>Laptop Accessories</h2>
+    <h2 id="accessories">Laptop Accessories</h2>
     <p>Enhance your laptop experience with our selection of accessories:</p>
     <ul>
         <li>External hard drives</li>
