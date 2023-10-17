@@ -51,12 +51,12 @@
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 48px;
             margin-bottom: 10px;
         }
 
         .hero h2 {
-            font-size: 24px;
+            font-size: 30px;
             margin-bottom: 20px;
         }
 
@@ -67,7 +67,7 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 30px;
         }
 
         p {
@@ -141,6 +141,51 @@
         .category-list li {
             margin-bottom: 5px;
         }
+      #why-choose {
+    font-size: 44px; /* You can adjust the size as needed */
+    text-align: center; /* Center-align the header */
+    margin-top: 20px; /* Add some space between the images and the header */
+}
+      /* Style for content blocks with alternating backgrounds */
+.content-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background color */
+    margin-top: 20px;
+}
+
+.content-block:nth-child(even) {
+    background-color: #e0e0e0; /* A slightly darker gray for alternating blocks */
+}
+
+.content-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-image {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
     </style>
 </head>
 <body>
@@ -179,7 +224,7 @@
             <li>Netbook</li>
         </ul>
     </div>
-
+<h2 id="why-choose">Why To Choose Our Laptops</h2>
     <!-- JavaScript to handle the toggle functionality -->
     <script>
         // Get references to the Category button and category list
@@ -205,14 +250,24 @@
             categorySection.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+    <!-- Section with header and text on the left -->
+<section class="content-block left-background">
+    <div class="content-text">
+        <h2>High-Performance Laptops</h2>
+        <p>Discover our collection of high-performance laptops with powerful processors and sleek designs.</p>
+    </div>
     <img src="https://img5.lalafo.com/i/posters/original_webp/19/a7/46/e47e06bcb27817c6efffb434d8.webp" alt="Laptop 1">
-    <img src="https://img5.lalafo.com/i/posters/original_webp/7c/c2/bc/73b7e5033e406bf618b17f17fd.webp" alt="Laptop 2">
+</section>
 
-    <h2 id="why-choose">Why Choose Our Laptops?</h2>
-    <ul>
-        <li>High-performance processors</li>
-        <li>Sleek and lightweight designs</li>
-    </ul>
+<!-- Section with header and text on the right -->
+<section class="content-block right-background">
+    <img src="https://img5.lalafo.com/i/posters/original_webp/7c/c2/bc/73b7e5033e406bf618b17f17fd.webp" alt="Laptop 2">
+    <div class="content-text">
+        <h2>Sleek and Lightweight</h2>
+        <p>Our laptops are designed to be sleek and lightweight, making them perfect for on-the-go use.</p>
+    </div>
+</section>
+
 
     <h2 id="accessories">Laptop Accessories</h2>
     <p>Enhance your laptop experience with our selection of accessories:</p>
