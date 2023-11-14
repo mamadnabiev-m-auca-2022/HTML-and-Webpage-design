@@ -43,16 +43,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the start (left) of the container */
     height: 100vh;
     background: url("https://p3-ofp.static.pub/ShareResource/na/ftv/hero/lenovo-savings-season.jpg");
     color: white;
     text-align: left;
-    padding: 0 120px;
-    padding-left: 10%;
-    position: relative; /* Use relative positioning */
-    left: -50px; /* Move the content 50px to the left. Adjust as needed */
+    padding: 0 120px; /* Keep your existing padding */
     font-family: 'Roboto', sans-serif;
+}
+
+.hero-content {
+    margin-left: 10%; /* Adjust this value to move your text and CTA button more to the left */
 }
 
 .hero h1 {
