@@ -4,39 +4,96 @@
     <meta charset="utf-8" />
     <title>My Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
+      
+        * {
+  box-sizing: border-box;
+/*   margin: 0;
+  padding: 0; */
+}
 
-        /* Flexbox menu styles */
-        .menu {
-            display: flex;
-            flex-direction: row; /* Set the flex direction to horizontal */
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
-        }
+body {
+  font-family: Arial, sans-serif;  
+  position: relative;
+}
 
-        .logo {
-            font-size: 24px;
-            color: white;
-            text-decoration: none;
-        }
+.menu {
+/*   background: #eee; */
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 250px;
+  transition: 0.5s;
+}
 
-        .menu-items {
-            display: flex;
-            gap: 20px;
-            flex-direction: row; /* Set the flex direction to horizontal */
-        }
+.menu ul {
+  list-style: none; 
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
 
-        .menu-item {
-            color: white;
-            text-decoration: none;
-        }
+.menu li {
+  /* display: inline; */
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+#burger-toggle:checked ~ .menu {
+  display: block;
+  right: 0px;
+}
+
+.burger .line {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  right: 0px;
+  z-index: 1
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }  
+  
+  .menu {
+    /* display: none; */
+    background: #eee; 
+/*     z-index: 10; */    
+      right: -100%;
+  }  
+  
+  .menu li {
+    display: block;
+  }
+  
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+  }  
+}
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+        
 
         /* Hero section styles */
 .hero {
@@ -188,16 +245,27 @@ ul li:hover {
     </style>
 </head>
 <body>
+  
     <!-- Menu Line -->
-    <div class="menu">
-        <a class="logo" href="#">My Website</a>
-        <div class="menu-items">
-            <a class="menu-item" href="#">Home</a>
-            <a class="menu-item" href="#">About</a>
-            <a class="menu-item" href="#">Services</a>
-            <a class="menu-item" href="#">Contact</a>
-        </div>
-    </div>
+    <input type="checkbox" id="burger-toggle">
+  <label for="burger-toggle" class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div> 
+  </label>
+  
+  <nav class="menu">
+    <ul>
+        <!-- Other Menu Items -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>      
+    </ul>
+    
+</nav>
+  
+
 
     <!-- Hero Section -->
     <section class="hero">
